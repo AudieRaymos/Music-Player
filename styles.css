@@ -43,3 +43,12 @@ img {
     overflow: hidden;
     text-align: left;
 }
+
+li {
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+li:hover {
+    background-color: #f3644b;
+}
