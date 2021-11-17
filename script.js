@@ -16,7 +16,12 @@ function createSongList() {
         item.appendChild(document.createTextNode(songs[i]));
         list.appendChild(item);
     }
-    return list
+    return list;
 }
 
-document.getElementById('songList').appendChild(createSongList())
+const songList = document.getElementById('songList').appendChild(createSongList())
+songList.appendChild(createSongList());
+
+songList.onclick = function (e) {
+    console.log(e);
+};
