@@ -7,3 +7,11 @@ const songs = [
     "Summer-Upbeat-Rock_AdobeStock_387181392_preview.m4a",
     "Sunset-Drive_AdobeStock_465141477_preview.m4a"
 ];
+
+function createSongList() {
+    const list = document.createElement("ol");
+    for (let i = 0; i < songs.length; i++) {
+        document.createElement('li')
+        
+    }
+}
