@@ -12,16 +12,20 @@ function createSongList() {
     const list = document.createElement("ol");
     for (let i = 0; i < songs.length; i++) {
         const item = document.createElement("li");
-        <li>A-Figure-of-Speech_AdobeStock_357620408_preview.m4a</li>
         item.appendChild(document.createTextNode(songs[i]));
         list.appendChild(item);
     }
     return list;
 }
 
-const songList = document.getElementById('songList').appendChild(createSongList())
+const songList = document.getElementById('songList').appendChild(createSongList());
 songList.appendChild(createSongList());
 
 songList.onclick = function (e) {
-    console.log(e);
+    const source = document.getElementById('source');
+    source.src = "songs/" + e.target.innerText;
+
+    const player = document.getElementById('player');
+    player.load();
+    player.play();
 };
