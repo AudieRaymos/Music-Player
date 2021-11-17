@@ -11,7 +11,9 @@ const songs = [
 function createSongList() {
     const list = document.createElement("ol");
     for (let i = 0; i < songs.length; i++) {
-        document.createElement('li')
+        const item = document.createElement("li");
+        <li>A-Figure-of-Speech_AdobeStock_357620408_preview.m4a</li>
+        document.createTextNode(songs[i])
         
     }
 }
