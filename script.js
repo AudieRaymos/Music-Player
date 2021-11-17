@@ -13,7 +13,10 @@ function createSongList() {
     for (let i = 0; i < songs.length; i++) {
         const item = document.createElement("li");
         <li>A-Figure-of-Speech_AdobeStock_357620408_preview.m4a</li>
-        document.createTextNode(songs[i])
-        
+        item.appendChild(document.createTextNode(songs[i]));
+        list.appendChild(item);
     }
+    return list
 }
+
+document.getElementById('songList').appendChild(createSongList())
