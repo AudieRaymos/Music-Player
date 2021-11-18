@@ -18,7 +18,7 @@ function createSongList() {
     return list;
 }
 
-const songList = document.getElementById('songList').appendChild(createSongList());
+const songList = document.getElementById("songList");
 songList.appendChild(createSongList());
 
 songList.onclick = function (e) {
@@ -27,7 +27,7 @@ songList.onclick = function (e) {
 
     document.querySelector('#currentSong').innerText = `Now Playing: ${e.target.innerText}`;
 
-    const player = document.getElementById('player');
+    const player = document.getElementById("player");
     player.load();
     player.play();
 };
