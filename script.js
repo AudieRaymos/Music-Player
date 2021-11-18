@@ -7,6 +7,7 @@ const songs = [
     "Summer-Upbeat-Rock_AdobeStock_387181392_preview.m4a",
     "Sunset-Drive_AdobeStock_465141477_preview.m4a"
 ];
+const player = document.getElementById("player");
 
 function createSongList() {
     const list = document.createElement("ol");
@@ -27,7 +28,10 @@ songList.onclick = function (e) {
 
     document.querySelector('#currentSong').innerText = `Now Playing: ${e.target.innerText}`;
 
-    const player = document.getElementById("player");
     player.load();
     player.play();
 };
+
+function playAudio(params) {
+    
+}
